@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture-Editing</title>
+    <!--Montserrat-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet"> 
+  <!--CSS Styles Sheet-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <!--Font Awsome-->
+  <script src="https://kit.fontawesome.com/dc214a2b4e.js" crossorigin="anonymous"></script>
+  <!--Bootstrap Scripts-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="title">
+
+        <!-- Nav Bar -->
+        <div class="container-fluid">
+        <nav class ="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand">Image Filters</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class = "collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class = "navbar-nav ml-auto">
+              <li class = "navbar-item">
+                  <a class ="nav-link" href="#footer">Contact</a>
+              </li>
+              <li class = "navbar-item">
+                  <a class ="nav-link" href="#upload">Upload</a>
+              </li>
+              <li class = "navbar-item">
+                  <a class ="nav-link" href="#cta">Samples</a>
+              </li>
+          </ul>
+          </div>
+      </nav>
+    
+        <!-- Title -->
+        <div class="row">
+        <div class="col-lg-6">
+          <h1>Apply new and interestiong filters.</h1>
+         <!-- <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>-->
+        </div>
+        
+      </div>
+      </section>
+
+    <!-- Features -->
+
+  <section id="features">
+    <div class="container-fluid dp">
+  <div class="row">
+    <div class="col-lg-4 col-sm-4">
+      <div class="ft"><i class="fas fa-check-circle w3-xxxlarge"></i></div>
+    <h3>Easy to use.</h3>
+    <!--<p class="details">So easy to use, even your dog could do it.</p>-->
+  </div>
+  <div class="col-lg-4 col-sm-4">
+    <div class="ft"><i class="fas fa-image w3-xxxlarge"></i></div>
+    <h3>Image of any type.</h3>
+   <!-- <p class="details">We have all the dogs, the greatest dogs.</p>-->
+  </div>
+  <div class="col-lg-4 col-sm-4">
+    <div class="ft"><i class="fas fa-heart w3-xxxlarge"></i></div>
+    <h3>Guaranteed to work.</h3>
+    <!--<p class="details">Find the love of your dog's life or your money back.</p>-->
+  </div>
+  </div>
+  </section>
+<!--Testimonials-->
+  <section id="testimonials">
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+              <h2>“One picture is worth more than ten
+                thousand words”</h2>
+              <img class="testimonial-image" src="static/images/download.jpeg" alt="dog-profile">
+              <em>By Confucius</em>
+        </div>
+        <div class="carousel-item">
+              <h2 class="testimonial-text">“If your pictures aren’t good enough, you’re not close enough.”</h2>
+              <img class="testimonial-image" src="static/images/Robart.jpeg" alt="lady-profile">
+              <em>Robert Capa</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </section>
+<!--Upload-->
+<section id="upload" class="about1">
+    <h2 class="features upload">Upload Your Image for Apply Filters</h2>
+    <form  method = "POST" enctype = 'multipart/form-data' action = "/upload">
+      <input class="btn btn-dark chose" type="file" value="upload" name = "file" accept="image/*">
+        <p class="upload-button">
+          <!-- <button type='submit' class="btn btn-dark btn-lg upload-button">Upload</button> -->
+        </p>
+
+        <!-- <div class="dropdown"> -->
+          <!-- <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter
+          </button> -->
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary btn-dark">
+              <input type="radio" name="options" id="option1" value="Guassian Blur" autocomplete="off" > Guassian Blur
+            </label>
+            <label class="btn btn-secondary btn-dark">
+              <input type="radio" name="options" id="option2" value="Median Filter" autocomplete="off"> Median Filter
+            </label>
+            <label class="btn btn-secondary btn-dark">
+              <input type="radio" name="options" id="option3" value="Laplacian Filter" autocomplete="off"> Laplacian Filter
+            </label>
+          </div>
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <input class="btn btn-primary" type="button" value="Input">
+                <button name = "age" value = "Guassian Blur" class="dropdown-item" type="button">Guassian Blur</button>
+                <button name = "age" value = "Median Filter" class="dropdown-item" type="button">Median Filter</button>
+                <button name = "age" value = "Laplacian Filter" class="dropdown-item" type="button">Laplacian Filter</button>
+              </div> -->
+            
+            <p class="upload-button">
+              <button class="btn btn-primary btn-dark" type="submit">Upload</button>
+            </p>
+        <!-- </div> -->
+    </form>
+</section>
+<!--Samples-->
+<section id="cta">
+
+    <h3 class="c">Check the samples Below</h3>
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+        <img class="sample-image" src="static/images/Laplacian-filter.png" alt="">
+      <h2 class="cta-hd">Laplacian Filter</h2>
+      <!--<p class="details">So easy to use, even your dog could do it.</p>-->
+    </div>
+    <div class="col-lg-4 col-sm-4">
+      <img class="Guassian" src="static/images/Guassian-filter.png" alt="">
+      <h2 class="cta-hd">Guassian Filter</h2>
+     <!-- <p class="details">We have all the dogs, the greatest dogs.</p>-->
+    </div>
+    <div class="col-lg-4 col-sm-4">
+      <img class="Median" src="static/images/Median.jpg" alt="">
+      <h2 class="cta-hd">Median Filter </h2>
+      <!--<p class="details">Find the love of your dog's life or your money back.</p>-->
+    </div>                                                                                                                          
+    <!--<button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>                                                                                                                          
+      <button type="button" class="btn btn-outline btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>-->                                                                                                                          
+
+  </section>
+<!--Contact-->
+  <footer id="footer">
+    <a href="https://twitter.com/KhaliqSubhan" target="_blank"><i class="fab fa-twitter fa-lg contact"></i></a>
+    <a href="https://www.linkedin.com/in/subhan-khaliq-20797a1b8/" target="_blank"><i class="fab fa-linkedin fa-lg contact"></i></a>
+    <a href="https://www.instagram.com/subhan.khaliq/" target="_blank"><i class="fab fa-instagram fa-lg contact"></i></a>
+    <a href="mailto:subhankhaliq420@gmail.com" target="_blank"><i class="fas fa-envelope fa-lg contact"></i></a>
+    <a href="https://github.com/Subhan-khaliq" target="_blank"><i class="fab fa-github-square fa-lg"></i></a>
+    <p>© Copyright 2022 Picture-Editing</p>
+  </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
